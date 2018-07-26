@@ -24,7 +24,9 @@ class calculosD:
             f.append(self.num_conver_Z[mins])
             
             if(len(e) == 2):
-                    result = math.sqrt(math.pow((d[1] - d[0]), 2) + math.pow((e[1]-[e[0]]),2) + math.pow((f[1]-[f[0]]),2))
+                    result = math.sqrt(math.pow((d[1] - d[0]), 2) + 
+                                       math.pow((e[1]-[e[0]]),2) + 
+                                       math.pow((f[1]-[f[0]]),2))
                     self.Dist.append(result)
                     del d[0]
                     del e[0]
@@ -33,14 +35,12 @@ class calculosD:
 
     def calcularDistaciaElongacion(self, Xmax, Xmin,Ymax, Ymin, Zmax, Zmin):
         self.Dist = []
-        cont = 0
         
-        for i in Xmax:
+        for cont in range(len(Xmax)):
             result = math.sqrt(math.pow((Xmax[cont] - Xmin[cont]),2) + 
-                               math.pow((Ymax[cont] - Ymin[cont]),2))
-            #math.pow((Zmax[cont] - Zmin[cont]),2)
+                               math.pow((Ymax[cont] - Ymin[cont]),2) +
+                               math.pow((Zmax[cont] - Zmin[cont]),2))
             self.Dist.append(result)
-            cont = cont + 1
         
     def GetDistancias(self):
         return self.Dist

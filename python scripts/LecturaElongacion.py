@@ -53,10 +53,9 @@ class lecturaElongacion():
         #Extraccion de fila correspondiente a los max valores
         for names, groups in s:
             self.areas.append(names)
-            #print(names)
             max_values = groups[groups.Z == num_Zmax[cont1]]        
             a = max_values.drop_duplicates(subset=None, keep="first", inplace=False)
-            # Comprobacion de tamano 
+            # Comprobacion de tamano para escoger el primer caso
             if len(a) > 1:
                 b = a[:1]
                 max_drop.append(b)
@@ -68,7 +67,7 @@ class lecturaElongacion():
         for names, groups in s:
             min_values = groups[groups.Z == num_Zmin[cont2]]
             a = min_values.drop_duplicates(subset=None, keep="first", inplace=False)
-            # Comprobacion de tamano
+            # Comprobacion de tamano para escoger el primer caso
             if len(a) > 1:
                 b = a[:1]
                 min_drop.append(b)
@@ -100,7 +99,6 @@ class lecturaElongacion():
         
         self.clc.calcularDistaciaElongacion(pointXmax, pointXmin, pointYmax, 
                                             pointYmin, pointZmax, pointZmin)
-
     
     def get_Dist(self):
         #print(self.clc.GetDistancias())
@@ -109,9 +107,3 @@ class lecturaElongacion():
     def get_Area(self):
         #print(self.areas)
         return self.areas
-
-#obj = lecturaElongacion()
-#obj.readPointsShape("C:/Users/alexa/Desktop/Datos/Datos/cuencas segundo orden/puntos_cuenca2do")
-#obj.readAreaPoligons("C:/Users/alexa/Desktop/Datos/Datos/cuencas segundo orden/poly_cuencas2do")
-#obj.get_Dist()
-#obj.get_Area()
