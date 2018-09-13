@@ -45,7 +45,7 @@ Con las demás librerias no se necesita hacer eso, debido venir incorporadas en l
 
 ### Uso
 
-* Requisitos
+* Pre-Requisitos
     * Los campos de los puntos dentro de los shp, solo pueden tener estos nombres: "X", "Y", "Z".
     * Para el calculo de la elongación el shp de los poligonos de la cuencas debe conteneer el campo "Shape-Area"(Se lo utiliza como identificador).
 
