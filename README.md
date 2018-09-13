@@ -60,10 +60,8 @@ Al hacer click sobre alguno de ellos se desplegará una nueva ventana en donde te
 > y asignarle un nombre.
 
 
-
 Los campos a ingresar varian de acuerdo a cada calculo que desea realiazar:
 
 * En el ingreso de los limites para el calculo del gradiente se recomienda que en el campo "Límite inferior (Segundo eje)" se ponga una cantidad negativa para evitar el choque de la recta con los bordes.
-
 
 
